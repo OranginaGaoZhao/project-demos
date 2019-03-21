@@ -104,10 +104,10 @@
     <p class="w3-opacity"><i># Low-level Computer Vison</i></p>
     <p class="w3-justify">A fast and flexible network, namely DemoNet, is proposed for image demosaicking. By taking a tunable CFA pattern as input, DemoNet can be generalized to any CFA pattern with a simple modification. DemoNet exhibits perceptually appealing results with the end-to-end solution, without requiring extra aid to overcome the challenging artifacts, demonstrating its potential for pratical image demosaicking. We perform in-depth analysis on the impact of different guidance prior information of CFA patterns. Our findings provide empirical knowledge on CNN architecture design for future image demosaicking research.</p>
 
-    <img src="images/arch.png" alt="boat" style="width:100%;min-height:280px;max-height:600px;">
+    <img src="images/demosaick.png" alt="boat" style="width:100%;">
 
     <p>Hard case demo: NO salient artifacts: aliasing, zippering, false colour, blur… most all current methods prone to them.</p>
-    <img src="images/hard_case.png" alt="boat" style="width:100%;min-height:280px;max-height:600px;">
+ 
   </div>
 
    <!-- Colour Correction Section -->
@@ -116,20 +116,8 @@
     <p class="w3-opacity"><i># Low-level Computer Vison</i></p>
     <p class="w3-justify">Over-exposure(OE) artifact occurs when a limited dynamic range of digital imaging device records the bright scene of which luminance level is higher than saturation level of the sensor. Correcting over-exposure aims to recover the fine details from the input. Existing methods are proposed mainly from the perspective of manually image pixel manipulation, therefore often come at the cost of high computational and algorithmic complexity. Recently, some deep learning based approaches on high dynamic range (HDR) reconstruction can be treated as image correction because their output HDR image can be tone mapped into the low dynamic range (LDR) image. However, existing tone mapping methods always fail to preserve the local details from the HDR domain when OE happens. In this paper, we present OEC, a convolutional neural network (CNN) for over-exposure correction. To our knowledge, it is the first framework capable of inferring photo-realistic natural images for over-exposure in LDR domain. To achieve this, we construct a training dataset of over-exposed and ground truth image pairs for end-to-end learning. Experimental results demonstrate the advantage of our method over existing OE correction methods with a significant margin.</p>
 
-    <img src="images/res0.png" alt="boat" style="width:100%;min-height:280px;max-height:660px;">
+    <img src="images/com_deep.png" alt="boat" style="width:100%;">
 
-    <div class="w3-row w3-padding-32">
-
-      <div class="w3-half">
-        <p>Real Over-exposed Image from online:</p>
-        <img src="images/oe0.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:95%">
-      </div>
-
-      <div class="w3-half">
-        <p>Reconstructed Output</p>
-        <img src="images/Rec_20_nfding0.jpg" class="w3-round" alt="Random Name" style="width:95%">
-      </div>
-    </div>
   </div>
 
   <!-- Image Denoising-->
@@ -139,6 +127,26 @@
     <p class="w3-justify">A flexible denoising network, namely BiDNet, is proposed for non-blind and blind image denoising.To our best knowledge, this is the first network is adequate for those both cases and performance the state-of-the-art. We highlight CNNs are able to learn a direct mapping function instead of modeling image priors explicitly. Our model exhibits perceptually appealing results on both noisy images corrupted by AWGN and real-world noisy images, demonstrating its potential for practical image denoising.</p>
 
     <img src="images/denoising.png" alt="boat" style="width:100%;min-height:280px;">
+
+
+
+    <div class="w3-row w3-padding-32">
+      <p>The left is the noisy image corrupted by AWGN with noise level 75. The right is the denoised image by ours.</p>
+      <div class="w3-half">
+<!--    <video width="200" autoplay loop>
+          <source src="images/movie.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video> -->
+        <img src="images/test_from_FFDnet.png" alt="Flowers in Chania" style="width:85%">
+      </div>
+
+      <div class="w3-half">
+<!--         <video width="200" autoplay loop>
+        <source src="images/video_.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video> -->
+      <img src="images/denoise.png" alt="Flowers in Chania" style="width:85%">
+      </div>
 
   </div>
 
@@ -151,11 +159,19 @@
     <div class="w3-row w3-padding-32">
 
       <div class="w3-half">
-         <img src="images/test.gif" alt="Flowers in Chania" style="width:75%">
+<!--    <video width="200" autoplay loop>
+          <source src="images/movie.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video> -->
+        <img src="images/test.gif" alt="Flowers in Chania" style="width:75%">
       </div>
 
       <div class="w3-half">
-         <img src="images/test2.gif" alt="Flowers in Chania" style="width:75%">
+<!--         <video width="200" autoplay loop>
+        <source src="images/video_.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video> -->
+      <img src="images/test2.gif" alt="Flowers in Chania" style="width:75%">
       </div>
     </div>
 
@@ -195,53 +211,13 @@
 
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
-  <div class="w3-row">
-    <div class="w3-col m5">
     <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
       <h3>Address</h3>
       <p>Swing by for a cup of coffee, or whatever.</p>
       <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Loughborough, UK</p>
       <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +44 7522121636</p>
       <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  z.gao@lboro.ac.uk</p>
-    </div>
-    <div class="w3-col m7">
-      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
-      <div class="w3-section">      
-        <label>Name</label>
-        <input class="w3-input" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">      
-        <label>Email</label>
-        <input class="w3-input" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">      
-        <label>Message</label>
-        <input class="w3-input" type="text" name="Message" required>
-      </div>  
-      <input class="w3-check" type="checkbox" checked name="Like">
-      <label>I Like it!</label>
-      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
-      </form>
-    </div>
-  </div>
 </div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4>Follow Us</h4>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-
-  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
-    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
-  </div>
-</footer>
 
 <script>
 // Script for side navigation
@@ -270,3 +246,4 @@ function openNav() {
 
 </body>
 </html>
+
